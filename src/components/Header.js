@@ -30,7 +30,7 @@ const Header = ({location}) => (
         }
         `}
     render={(data) => {
-      const logoImg = require('./images/logo.svg');
+      const logoImg = require('./images/algo pearls.png');
       const twitter = require('./images/twitter.svg');
       const {
         site: {
@@ -57,9 +57,9 @@ const Header = ({location}) => (
               </button>
               <Link to={finalLogoLink} className={'navbar-brand navBarBrand'}>
                 {logo.image !== '' ?
-                  (<img className={'img-responsive'} src={logo.image} alt={'logo'} />)
+                  (<img className={'img-responsive'} src={logo.image} alt={'logo1'} />)
                   :
-                  (<img className={'img-responsive'} src={logoImg} alt={'logo'} />)
+                  (<img className={'img-responsive'} src={logoImg} alt={'logo2'} />)
                 }
                 <div className={"headerTitle"} dangerouslySetInnerHTML={{__html: headerTitle}} />
               </Link>

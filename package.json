@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-gitbook-boilerplate",
+  "name": "algorithms-pearls",
   "private": true,
-  "description": "Documentation, built with mdx",
-  "author": "Praveen <praveen@hasura.io> (@praveenweb)",
+  "description": "A study group formed by engineers from all levels where we aim to challenge our minds with innovative and well known problems in order to share our ideas, approaches and solutions in a dynamic and interactive environment.",
+  "author": "Miriam <miriam_lee@epam.com>",
   "version": "0.0.1",
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
@@ -21,6 +21,7 @@
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-gtag": "^1.0.11",
     "gatsby-plugin-layout": "^1.1.3",
+    "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-mdx": "^1.0.24",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-sharp": "^2.2.11",
@@ -45,11 +46,15 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "gatsby develop",
-    "build": "gatsby build --prefix-paths"
+    "start": "npm run develop",
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "devDependencies": {
-    "gatsby-plugin-remove-trailing-slashes": "^2.1.2",
+    "gatsby-plugin-remove-trailing-slashes": "^2.1.3",
     "prism-react-renderer": "^0.1.7"
   }
 }

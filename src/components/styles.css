@@ -84,7 +84,7 @@ body {
 
 /* Header section starts here */
 .navBarDefault {
-  background-color: #372476;
+  background-color: rgb(51, 56, 56);
   border-radius: 0;
   border-top: 0;
   margin-bottom: 0;
