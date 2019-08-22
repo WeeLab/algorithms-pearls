@@ -17,9 +17,8 @@ const config = {
   },
 	"sidebar": {
 		"forcedNavOrder": [
-			"/introduction",
-    		"/codeblock"
-		],
+			"/search-algorithms"
+    	],
 		"links": [
       { text: "Epam", link: "http://www.epam.com" },
       { text: "Topics Trello", link: "https://epa.ms/algopearls" },

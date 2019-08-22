@@ -54,7 +54,7 @@ module.exports = {
             resolve: 'gatsby-remark-copy-linked-files'
           }
         ],
-        plugins: ["gatsby-remark-images"],
+        plugins: ["gatsby-remark-images","gatsby-remark-embed-youtube"],
         extensions: [".mdx", ".md"]
       }
     },
@@ -79,5 +79,19 @@ module.exports = {
         anonymize: false,
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400, // Optional: Overrides optional.ratio
+            }
+          }
+        ]
+      }
+    }
   ]
 };
