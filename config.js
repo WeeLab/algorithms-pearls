@@ -17,7 +17,8 @@ const config = {
   },
 	"sidebar": {
 		"forcedNavOrder": [
-			"/search-algorithms"
+      "/search-algorithms",
+      "/string-manipulation"
     	],
 		"links": [
       { text: "Epam", link: "http://www.epam.com" },
