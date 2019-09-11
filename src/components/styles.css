@@ -84,7 +84,7 @@ body {
 
 /* Header section starts here */
 .navBarDefault {
-  background-color: #372476;
+  background-color: rgb(51, 56, 56);
   border-radius: 0;
   border-top: 0;
   margin-bottom: 0;
@@ -150,7 +150,7 @@ pre {
   -webkit-padding-start: 40px;
   -moz-padding-start: 40px;
   -o-padding-start: 40px;
-  margin: 24px 0px;
+  /* margin: 24px 0px; */
   padding: 0px 0px 0px 2em;
 }
 

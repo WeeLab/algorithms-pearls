@@ -8,7 +8,10 @@ module.exports = {
     docsLocation: config.siteMetadata.docsLocation,
     ogImage: config.siteMetadata.ogImage,
     favicon: config.siteMetadata.favicon,
-    logo: { link: config.header.logoLink ? config.header.logoLink : '/', image: config.header.logo }, // backwards compatible
+    logo: {
+      link: config.header.logoLink ? config.header.logoLink : "/",
+      image: config.header.logo ? config.header.logo : "",
+    }, // backwards compatible
     headerTitle: config.header.title,
     githubUrl: config.header.githubUrl,
     helpUrl: config.header.helpUrl,
@@ -19,6 +22,18 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Algorithms Pearls",
+        short_name: "algo-pearls",
+        start_url: "/",
+        background_color: "#663399",
+        theme_color: "#663399",
+        display: "minimal-ui",
+        icon: "src/components/images/algo pearls.png", // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -32,14 +47,14 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true
+              maxWidth: 1035
             }
           },
           {
             resolve: 'gatsby-remark-copy-linked-files'
           }
         ],
+        plugins: ["gatsby-remark-images","gatsby-remark-embed-youtube"],
         extensions: [".mdx", ".md"]
       }
     },
@@ -64,5 +79,19 @@ module.exports = {
         anonymize: false,
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400, // Optional: Overrides optional.ratio
+            }
+          }
+        ]
+      }
+    }
   ]
 };
